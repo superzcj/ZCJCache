@@ -56,6 +56,7 @@ static NSString * const ZCJCachePrefix = @"com.zcj.ZCJCache";
         return;
     }
     
+    //向group追加任务队列，如果所有的任务都执行或者超时，它发出通知
     dispatch_group_t group = nil;
     ZCJMemoryCacheObjectBlock memBlock = nil;
     ZCJDiskCacheObjectBlock diskBlock = nil;
